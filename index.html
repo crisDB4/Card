@@ -4,168 +4,182 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+      :root {
+        --white: #FFFFFF;
+        --seashell: #ECF0F1;
+        --shadowGrewGroose: #D0D3D4;
+        --palepurple: #BB8FCE;
+        --bluedianne: #154360;
+        --aquaisland: #A2D9CE;
+        --boulder: #757575;
+        --stormdust: #616161;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
       body {
-        background: #ecf0f1;
+        font-family: 'Open Sans', sans-serif;
+        background: var(--seashell);
+        margin: 0;
       }
       section {
         width: 100%;
-        display: flex;
-        justify-content: center;
+        height: 100vh;
+        display: grid;
+        place-items: center;
       }
       .card {
-        width: 200px;
-        height: 300px;
-        background: #ffffff;
+        width: 300px;
+        height: 450px;
+        background: var(--white);
         border-radius: 20px;
-        box-shadow: 2px 4px 10px #d0d3d4;
-        display: flex;
+        box-shadow: 2px 4px 10px var(--shadowGrewGroose);
         position: relative;
         overflow: hidden;
       }
+
+      /* left design */
       .card .one_design {
-        width: 200px;
-        height: 130px;
+        width: 400px;
+        height: 210px;
         opacity: .8;
         position: absolute;
-        top: -15%;
-        right: 20%;
+        top: -40px;
+        right: 70px;
         transform: rotate(135deg);
         z-index: 4;
       }
+      .card .one_design div:nth-child(1) {
+        width: 77%;
+        height: 15%;
+        background: var(--bluedianne);
+      }
+      .card .one_design div:nth-child(2) {
+        width: 100%;
+        height: 10%;
+        background: var(--palepurple);
+      }
+      .card .one_design div:nth-child(3) {
+        height: 83%;
+        background: var(--aquaisland);
+      }
+
       .card .two_design {
+        width: 400px;
+        height: 400px;
+        opacity: .8;
+        position: absolute;
+        top: -50px;
+        right: 220px;
+        transform: rotate(135deg);
+        z-index: 2;
+        background: var(--palepurple);
+      }
+      .card .two_design div:nth-child(1) {
+        width: 100%;
+        height: 5%;
+        background: var(--bluedianne);
+      }
+      .card .two_design div:nth-child(2) {
+        width: 100%;
+        height: 10%;
+        background: var(--palepurple);
+      }
+      .two_design div:nth-child(3) {
+        width: 85%;
+        height: 85%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: var(--aquaisland);
+      }
+
+      .card .three_design {
         width: 200px;
         height: 200px;
         opacity: .8;
         position: absolute;
-        top: 5px;
-        right: 125px;
-        transform: rotate(135deg);
-        z-index: 2;
-        background: #BB8FCE;
-      }
-      .card .three_design {
-        width: 200px;
-        height: 130px;
-        opacity: .8;
-        position: absolute;
-        top: 87px;
-        right: 142px;
+        top: 90px;
+        right: 235px;
         transform: rotate(135deg);
         z-index: 3;
-        background: #154360;
+        background: var(--bluedianne);
       }
-      .card .four_design {
+      .card .three_design div:nth-child(1) {
+        width: 100%;
+        height: 20%;
+        background: var(--bluedianne);
+      }
+      .card .three_design div:nth-child(2) {
+        width: 80%;
+        height: 10%;
+        position: absolute;
+        right: 0;
+        background: var(--palepurple);
+      }
+      .card .three_design div:nth-child(3) {
+        width: 80%;
+        height: 70%;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        background: var(--aquaisland);
+      }
+
+      /* right design */
+      .card .fourth_design {
         width: 30px;
         height: 90px;
         opacity: .8;
         position: absolute;
         top: 170px;
         right: -27px;
-        /* transform: rotate(90deg); */
       }
-      .card .one_design div:nth-child(1) , 
-      .two_design div:nth-child(1),
-      .three_design div:nth-child(1) {
-        width: 220px;
-        height: 25px;
-        background: #154360;
-      }
-      .card .one_design div:nth-child(2) , 
-      .two_design div:nth-child(2),
-      .three_design div:nth-child(2) {
-        width: 300px;
-        height: 15px;
-        background: #BB8FCE ;
-      }
-      .card .one_design div:nth-child(3) , 
-      .two_design div:nth-child(3),
-      .three_design div:nth-child(3) {
-        width: 100%;
-        height: 70%;
-        background: #A2D9CE ;
-      }
-      .two_design div:nth-child(3) {
-        width: 80%;
-        height: 70%;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-      .three_design div:nth-child(2),
-      .three_design div:nth-child(3) {
-        width: 80%;
-        height: 70%;
-        position: absolute;
-        right: 0;
-      }
-      .three_design div:nth-child(3) {
-        top: 30%;
-      }
-      .four_design div:nth-child(1) {
+      .fourth_design div:nth-child(1) {
         width: 30px;
         height: 30px;
-        background: #154360;
+        background: var(--bluedianne);
         transform: rotate(45deg);
       }
-      .four_design div:nth-child(2) {
+      .fourth_design div:nth-child(2) {
         width: 30px;
         height: 30px;
-        background: #BB8FCE;
+        background: var(--palepurple);
         transform: rotate(45deg);
       }
-      .four_design div:nth-child(3) {
+      .fourth_design div:nth-child(3) {
         width: 30px;
         height: 30px;
-        background: #A2D9CE;
+        background: var(--aquaisland);
         transform: rotate(45deg);
       }
+
+      /*  Photo */
       .card .perfil {
-        width: 60px;
-        height: 60px;
-        display: flex;
+        width: 88px;
+        height: 88px;
         position: absolute;
-        z-index: 6;
-        right: 15px;
-        top: 45px;
+        right: 20px;
+        top: 60px;
       }
       .card .perfil img {
-        width: 59px;
-        height: 59px;
+        width: 100%;
         border-radius: 50%;
-        border: 1px solid #ecf0f1;
+        border: 3px solid var(--seashell);
       }
-      .card .perfil .bandera {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-      }
-      .card .perfil .bandera .amarillo {
-        width: 100%;
-        height: 40%;
-        background: yellow;
-      }
-      .card .perfil .bandera .azul {
-        width: 100%;
-        height: 30%;
-        background: blue;
-      }
-      .card .perfil .bandera .rojo {
-        width: 100%;
-        height: 30%;
-        background: red;
-      }
+
+      /* My name and profession */
       .name_profession{
         position: absolute;
-        right: 15px;
-        top: 35%;
-        font-size: 11px;
+        right: 20px;
+        top: 162px;
+        font-size: var(--md);
         text-align: right;
       }
       .name_profession p:nth-child(1){
@@ -174,45 +188,29 @@
         margin-bottom: 5px;
       }
       .name_profession p:nth-child(2){
-        font-size: 12px;
-        color: #757575;
-        margin-top: 5px;
+        font-size: var(--lg);
+        color: var(--boulder);
+        margin-top: 8px;
       }
-      .contacto {
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-        border-radius: 20px;
-        margin-right: -20px;
-        margin-bottom: -20px;
-        padding: 10px;
-        padding-right: 31px;
-        padding-bottom: 27px;
-        background: #154360;
-        color: #ffffff;
-        opacity: .9;
-        font-size: 11px;
-      }
-      .contacto span{
-        font-weight: bold;
-      }
+
+      /* Knowledge */
       .contenido{
-        width: 140px;
+        width: 250px;
         height: 100px;
         position: absolute;
-        right: 15px;
-        top: 65%;
-        font-size: 10px;
-        color: #616161;
-        justify-content: space-between;
+        right: 0;
+        bottom: 60px;
+        font-size: var(--sm);
+        color: var(--stormdust);
         text-align: right;
       }
       .contenido p {
         display: inline-block;
         margin-top: 0;
-        margin-right: 12px;
-        
+        margin: 4px 20px 4px 5px;
       }
+
+      /* Social Networks */
       .icons {
         position: absolute;
         margin: 8px;
@@ -220,16 +218,43 @@
         left: 30px;
       }
       .icons a {
-        margin-right: 15px;
-        font-size: 20px;
-        color: #154360;
+        margin-right: 20px;
+        font-size: 35px;
+        color: var(--bluedianne);
         text-decoration: none;
+        cursor: pointer;
       }
+      .icons a:hover {
+        color: var(--palepurple);
+      }
+
+      .contacto {
+        cursor: pointer;
+        position: absolute;
+        bottom: 2px;
+        right: 0;
+        border-radius: 20px;
+        margin: auto -20px -20px auto;
+        padding: 10px 43px 27px 10px;
+        background: var(--bluedianne);
+        color: var(--white);
+        opacity: .9;
+        font-size: var(--md);
+      }
+      .contacto:hover {
+        background: var(--palepurple);
+      }
+      .contacto span{
+        font-weight: bold;
+      }
+
     </style>
   </head>
   <body>
     <section>
       <div class="card">
+
+        <!-- left design -->
         <div class="one_design">
           <div></div>
           <div></div>
@@ -245,34 +270,42 @@
           <div></div>
           <div></div>
         </div>
-        <div class="four_design">
+
+        <!-- right design -->
+        <div class="fourth_design">
             <div></div>
             <div></div>
             <div></div>
         </div>
+
+        <!-- photo -->
         <div class="perfil">
           <img
             src="https://media.licdn.com/dms/image/C4E03AQGJdsBSddG3rg/profile-displayphoto-shrink_800_800/0/1648376529897?e=1685577600&v=beta&t=6QEL5oSmodoUWbimgY5K1nOdfEm1qD7Q962n3bSQe0c"
             alt="Cristian Barrera"
           />
-          <div class="bandera">
-            <div class="amarillo"></div>
-            <div class="azul"></div>
-            <div class="rojo"></div>
-          </div>
         </div>
+
+        <!-- Name and Profession -->
         <div class="name_profession">
             <p>Cristian D. <br>B. Arcos</p>
             <p>Computer Engineer</p>
         </div>
+
+        <!-- Knowledge -->
         <div class="contenido">
             <p>FullStack</p>
-            <p>Data Science</p>
-            <p>Js</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>React.js</p>
+            <p>Next.js</p>
+            <p>Node.js</p>
+            <p>API REST</p>
             <p>Python</p>
             <p>ML</p>
-            <p>DevOps</p>
         </div>
+
+        <!-- Social Networks -->
         <div class="icons">
         <a href="https://github.com/crisDB4" class="fa fa-github"></a>
         <a href="https://www.linkedin.com/in/cristianbarreraarcos/" class="fa fa-linkedin-square"></a>
